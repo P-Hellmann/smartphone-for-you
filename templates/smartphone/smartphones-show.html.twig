@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SmartphoneController!{% endblock %}
+
+{% block body %}
+<h1>Smartphones</h1>
+    {% for smartphone in smartphones %}
+        <div class="card">
+            {% if smartphone.picture %}
+            <img src="{{ smartphone.picture }}" alt="{{ smartphone.type }}"/>
+            {% endif %}
+            <h4>{{ smartphone.type }}</h4>
+            <p>{{ smartphone.memory }}</p>
+            <p>{{ smartphone.color }}</p>
+            <p>{{ smartphone.description }}</p>
+            <p>{{ smartphone.price }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
