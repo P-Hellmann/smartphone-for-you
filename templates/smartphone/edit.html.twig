@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SmartphoneController!{% endblock %}
+
+{% block body %}
+<h1>Edit Smartphone</h1>
+    <div class="form">
+    {{ form_start(form) }}
+        {{ form_row(form.vendor) }}
+        {{ form_row(form.type) }}
+        {{ form_row(form.memory) }}
+        {{ form_row(form.color) }}
+        {{ form_row(form.description) }}
+        {{ form_row(form.price) }}
+        {{ form_row(form.picture) }}
+        {{ form_row(form.submit) }}
+        <a href="{{ path('app_list_smartphone') }}" class="btn btn-primary">Back</a>
+    {{ form_end(form) }}
+    </div>
+{% endblock %}

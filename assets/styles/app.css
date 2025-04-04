@@ -1,2 +1,17 @@
 body {
+    padding: 10px;
+}
+
+nav {
+
+}
+
+.form {
+    width: 75%;
+}
+
+td, th {
+    padding: 5px;
+    text-align: center;
+    border: black 2px solid;
 }

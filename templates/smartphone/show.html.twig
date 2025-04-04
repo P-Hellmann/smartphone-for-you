@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ smartphone.vendor.name }} - {{ smartphone.type }}{% endblock %}
+
+{% block body %}
+<h1>{{ smartphone.vendor.name }} - {{ smartphone.type }}</h1>
+    <div>
+        {% if smartphone.picture %}
+        <img src="{{ smartphone.picture }}" alt="{{ smartphone.type }}"> <br>
+        {% endif %}
+        {% if smartphone.description %}
+        Description: {{ smartphone.description }} <br>
+        {% endif %}
+        Memory: {{ smartphone.memory }} <br>
+        Color: {{ smartphone.color }} <br>
+        Price: {{ smartphone.price }}
+    </div>
+    <br>
+    <a href="{{ path('app_list_smartphone') }}" class="btn btn-primary">Back</a>
+{% endblock %}
